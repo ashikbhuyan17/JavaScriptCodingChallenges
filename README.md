@@ -47,6 +47,40 @@ alt='Ashik Bhuyan'
 
 </div>
 
-
 <h1 align="center" >Array CRUD(create,read,update,delete) Operation </h1>
+
+
+##### 01. Insert element first position
+
+```js
+
+const insertElementFirstTime = (list, newData) => {
+ //Write Your solution Here
+};
+
+console.log(insertElementFirstTime([], "item 1")); // ["item 1"]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const insertElementFirstTime = (list, newData) => {
+  for (let index = list.length - 1; index >= list.length - 1; index--) {
+    list[index + 1] = newData;
+  }
+  return list;
+};
+
+
+const newData = "item 1";
+const displayInsertElementFirstTime = insertElementFirstTime([], newData);
+console.log("🚀 insert element first position", displayInsertElementFirstTime);
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
 
