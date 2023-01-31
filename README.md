@@ -5,7 +5,7 @@
 
 <div align="center" >
 
-<a href="ashikbhuyan.swe.diu@gmail.com">
+<a href="mailto:ashikbhuyan.swe.diu@gmail.com">
 <img
 src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white'
 alt='Ashik Bhuyan'
@@ -47,5 +47,4 @@ alt='Ashik Bhuyan'
 
 </div>
 
-<h1 align="center" >Array CRUD(create,read,update,delete) Operation </h1>
 
