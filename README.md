@@ -83,4 +83,37 @@ console.log("🚀 insert element first position", displayInsertElementFirstTime)
 ---
 **[⬆ Back to Top](#header)**
 
+##### 02. Insert element last position
 
+```js
+
+const insertElementLastPosition = (list, newData) => {
+ //Write Your solution Here
+};
+
+console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], "item 4")); // ["item 1"]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const insertElementLastPosition = (list, newData) => {
+  for (let index = list.length - 1; index >= list.length - 1; index--) {
+    list[index + 1] = newData;
+  }
+  return list;
+};
+
+
+const list = ["Item 1", "Item 2", "Item 3"];
+const newData = "Item 4";
+const displayInsertElementLastPosition = insertElementLastPosition(list,newData);
+console.log( "🚀 insert element last position",displayInsertElementLastPosition);
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
