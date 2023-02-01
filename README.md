@@ -156,11 +156,6 @@ console.log(
   displayInsertElementLastPosition
 );
 
-
-
-
-
-
 ```  
 
 </details>
