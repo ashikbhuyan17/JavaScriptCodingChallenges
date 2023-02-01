@@ -91,7 +91,7 @@ const insertElementLastPosition = (list, newData) => {
  //Write Your solution Here
 };
 
-console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], "item 4")); // ["item 1"]
+console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], "item 4")); // ["Item 1", "Item 2", "Item 3", "item 4"]
 
 ```
 
@@ -110,6 +110,56 @@ const list = ["Item 1", "Item 2", "Item 3"];
 const newData = "Item 4";
 const displayInsertElementLastPosition = insertElementLastPosition(list,newData);
 console.log( "🚀 insert element last position",displayInsertElementLastPosition);
+
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
+
+##### 03. Insert arrays into another array
+
+```js
+
+const insertElementLastPosition = (list, newData) => {
+ //Write Your solution Here
+};
+
+console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], ["item 4","item 5"])); // ["Item 1", "Item 2", "Item 3", "item 4","item 5"]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const insertElementLastPosition = (list, newData) => {
+  for (let index = list.length ; index >= list.length ; index--) {
+    for (let arrayIndex = 0; arrayIndex < newData.length; arrayIndex++) {
+      const element = newData[arrayIndex];
+      list[index + arrayIndex] = element;
+    }
+  }
+  return list;
+};
+
+
+const list = ["Item 1", "Item 2", "Item 3"];
+const newData = ["Item 4", "Item 5"];
+const displayInsertElementLastPosition = insertElementLastPosition(
+  list,
+  newData
+);
+console.log(
+  "🚀 insert element last position",
+  displayInsertElementLastPosition
+);
+
+
+
+
+
 
 ```  
 
