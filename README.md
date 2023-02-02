@@ -156,21 +156,10 @@ console.log(
   displayInsertElementLastPosition
 );
 
-
-
-// or 
-// let a1 = [1, 2, 3, 4, 5];
-// let a2 = [21, 22];
-// let startIndex = 0;
-// let insertionIndex = 2;
-// let result;
-
-
-// result = a1
-//   .slice(startIndex, insertionIndex)
-//   .concat(a2)
-//   .concat(a1.slice(insertionIndex));
-// console.log("🚀 ~ file: test.js:67 ~ result", result);
+// or
+// const list = ["Item 1", "Item 2", "Item 3"];
+// const newData = ["Item 4", "Item 5"];
+// console.log(list.concat(newData))
 
 ```  
 
@@ -219,6 +208,21 @@ const insertElementSpecificPosition = (list, newData, position) => {
     "🚀 Insert element specific position in an Array",
     displayInsertElementSpecificPosition
   );
+
+
+  // or 
+// let a1 = [1, 2, 3, 4, 5];
+// let a2 = [21, 22];
+// let startIndex = 0;
+// let insertionIndex = 2;
+// let result;
+
+
+// result = a1
+//   .slice(startIndex, insertionIndex)
+//   .concat(a2)
+//   .concat(a1.slice(insertionIndex));
+// console.log("🚀 ~ file: test.js:67 ~ result", result);
   
 ```  
 
