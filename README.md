@@ -156,13 +156,58 @@ console.log(
   displayInsertElementLastPosition
 );
 
-
-
-
-sfjfsjh
 ```  
 
 </details>
 
 ---
 **[⬆ Back to Top](#header)**
+
+
+##### 04. Insert an element at a specific position in an Array
+
+```js
+
+const insertElementSpecificPosition = (list, newData, position) => {
+ //Write Your solution Here
+};
+
+console.log(insertElementSpecificPosition(["Item 1", "Item 2", "Item 3"], "item 4",3)); // ["Item 1", "Item 2", "Item 3", "item 4","item 5"]
+
+```
+
+<details><summary style="cursor:pointer">Solution</summary>
+
+```js
+const insertElementSpecificPosition = (list, newData, position) => {
+    if (position <= list.length && position >= 0) {
+      for (let index = list.length; index >= position; index--) {
+        list[index] = list[index - 1];
+      }
+      list[position] = newData;
+      return list;
+    }
+    return [];
+  };
+  
+  
+  const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
+  const newData = "Item 5";
+  const position = 3;
+  const displayInsertElementSpecificPosition = insertElementSpecificPosition(
+    list,
+    newData,
+    position
+  );
+  console.log(
+    "🚀 Insert element specific position in an Array",
+    displayInsertElementSpecificPosition
+  );
+  
+```  
+
+</details>
+
+---
+**[⬆ Back to Top](#header)**
+
