@@ -1,4 +1,5 @@
 function findMinMax(array) {
+    const n =array.length
     var min = array[0];
     var max = array[0];
 
@@ -8,6 +9,12 @@ function findMinMax(array) {
     //     else if (array[i] > max)
     //         max = array[i];
     // }
+
+    // Check if the first element is a peak
+    if (n == 1) {
+        return { min: array[0], max: array[0] }
+    }
+    
     for (let index = 1; index < array.length; index++) {
         const element = array[index];
         if (element > max) {  //check max value
@@ -21,9 +28,9 @@ function findMinMax(array) {
     return { min: min, max: max }
 }
 
-const array = [423, 6, 46, 34, 23, 900, 13, 53, 4, 100, 700, 5, 1200];
+const array = [423, 6, 1,46, 34, 23, 900, 13, 1600,53, 4, 100, 700, 5, 1200];
 const { min, max } = findMinMax(array);
-console.log(`${min && max ? `min- ${min}, max - ${max}` : 'element not found'} `);
+console.log(`${min && max ? `min-> ${min}, max -> ${max}` : 'element not found'} `);
 
 
 //ECMAScript 6 (ES6)
