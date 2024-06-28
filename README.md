@@ -47,7 +47,7 @@ alt='Ashik Bhuyan'
 
 </div>
 
-<h1 align="center" >Array CRUD(create,read,update,delete) Operation </h1>
+<!-- <h1 align="center" >Array CRUD(create,read,update,delete) Operation </h1> -->
 
 
 ##### 01. Insert element first position
@@ -196,45 +196,29 @@ console.log(insertElementSpecificPosition(["Item 1", "Item 2", "Item 3"], "item 
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
+
 const insertElementSpecificPosition = (list, newData, position) => {
+    if (position < 0 || position > list.length) {
+        return [...list]; // Return a copy of the original list if position is out of bounds
+    }
     if (position <= list.length && position >= 0) {
-      for (let index = list.length; index >= position; index--) {
-        list[index] = list[index - 1];
-      }
-      list[position] = newData;
-      return list;
+        // Shift elements to the right
+        for (let index = list.length; index > position; index--) {
+            list[index] = list[index - 1];
+        }
+        // Insert new data at the specified position
+        list[position] = newData;
+        return list;
     }
     return [];
-  };
-  
-  
-  const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
-  const newData = "Item 5";
-  const position = 3;
-  const displayInsertElementSpecificPosition = insertElementSpecificPosition(
-    list,
-    newData,
-    position
-  );
-  console.log(
-    "🚀 Insert element specific position in an Array",
-    displayInsertElementSpecificPosition
-  );
+};
 
+const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
+const newData = "Insert Element";
+const position = 3;
+const displayInsertElementSpecificPosition = insertElementSpecificPosition(list, newData, position);
+console.log("🚀 Insert element specific position in an Array", displayInsertElementSpecificPosition);
 
-  // or 
-// let a1 = [1, 2, 3, 4, 5];
-// let a2 = [21, 22];
-// let startIndex = 0;
-// let insertionIndex = 2;
-// let result;
-
-
-// result = a1
-//   .slice(startIndex, insertionIndex)
-//   .concat(a2)
-//   .concat(a1.slice(insertionIndex));
-// console.log("🚀 ~ file: test.js:67 ~ result", result);
   
 ```  
 
@@ -256,6 +240,23 @@ const updateElement = (list, position, newData) => {
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
+const updateElementSpecificPosition = (list, newData, position) => {
+    if (position >= 0 && position < list.length) {
+        const updatedList = [...list]; // Create a copy of the original array
+        updatedList[position] = newData; // Update element at specified position
+        return updatedList;
+    } else {
+        return [...list]; // Return a copy of the original array if position is out of bounds
+    }
+};
+
+// Example usage:
+const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
+const newData = "Updated Item";
+const position = 2;
+const displayUpdatedList = updateElementSpecificPosition(list, newData, position);
+console.log("🚀 Updated list:", displayUpdatedList);
+
 const updateElement = (list, position, newData) => {
   for (let index = 0; index < list.length; index++) {
     list[position - 1] = newData
