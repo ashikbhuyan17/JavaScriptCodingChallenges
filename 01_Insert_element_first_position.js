@@ -8,11 +8,12 @@ const insertElementFirstTime = (list, newData) => {
     return list;
 };
 
-//shortest way 
+//========================== shortest way =====================================================
 // const insertElementFirstTime = (list, newData) => {
 //     list.unshift(newData);
 //     return list;
 // };
+//=============================================================================================
 
 const newData = "Item 1";
 const displayInsertElementFirstTime = insertElementFirstTime([ "Item 2", "Item 3", "Item 4"], newData);

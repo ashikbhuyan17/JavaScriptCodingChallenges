@@ -4,11 +4,12 @@ const insertElementLastPosition = (list, newData) => {
     return list;
 };
 
-//shortest way 
+//========================== shortest way =====================================================
 // const insertElementLastPosition = (list, newData) => {
 //     list.push(newData);
 //     return list;
 // };
+//=============================================================================================
 
 const list = ["Item 1", "Item 2", "Item 3"];
 const newData = "Item 4";
