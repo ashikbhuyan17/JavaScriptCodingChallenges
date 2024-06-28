@@ -66,16 +66,26 @@ console.log(insertElementFirstTime([], "item 1")); // ["item 1"]
 
 ```js
 const insertElementFirstTime = (list, newData) => {
-  for (let index = list.length - 1; index >= list.length - 1; index--) {
-    list[index + 1] = newData;
-  }
-  return list;
+    // Shift elements one position to the right
+    for (let index = list.length - 1; index >= 0; index--) {
+        list[index + 1] = list[index];
+    }
+    // Insert new element at the start of the list
+    list[0] = newData;
+    return list;
 };
 
+//========================== shortest way =====================================================
+// const insertElementFirstTime = (list, newData) => {
+//     list.unshift(newData);
+//     return list;
+// };
+//=============================================================================================
 
-const newData = "item 1";
-const displayInsertElementFirstTime = insertElementFirstTime([], newData);
+const newData = "Item 1";
+const displayInsertElementFirstTime = insertElementFirstTime([ "Item 2", "Item 3", "Item 4"], newData);
 console.log("🚀 insert element first position", displayInsertElementFirstTime);
+
 ```  
 
 </details>
@@ -99,17 +109,23 @@ console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], "item 4"))
 
 ```js
 const insertElementLastPosition = (list, newData) => {
-  for (let index = list.length - 1; index >= list.length - 1; index--) {
-    list[index + 1] = newData;
-  }
-  return list;
+    // Add the new element at the end of the array
+    list[list.length] = newData;
+    return list;
 };
 
+//========================== shortest way =====================================================
+// const insertElementLastPosition = (list, newData) => {
+//     list.push(newData);
+//     return list;
+// };
+//=============================================================================================
 
 const list = ["Item 1", "Item 2", "Item 3"];
 const newData = "Item 4";
-const displayInsertElementLastPosition = insertElementLastPosition(list,newData);
-console.log( "🚀 insert element last position",displayInsertElementLastPosition);
+const displayInsertElementLastPosition = insertElementLastPosition(list, newData);
+console.log("🚀 insert element last position", displayInsertElementLastPosition);
+
 
 ```  
 
@@ -123,43 +139,39 @@ console.log( "🚀 insert element last position",displayInsertElementLastPositio
 
 ```js
 
-const insertElementLastPosition = (list, newData) => {
+const insertArrays = (targetArray, sourceArray) => {
  //Write Your solution Here
 };
 
-console.log(insertElementLastPosition(["Item 1", "Item 2", "Item 3"], ["item 4","item 5"])); // ["Item 1", "Item 2", "Item 3", "item 4","item 5"]
+const targetArray = ["Item 1", "Item 2", "Item 3"];
+const sourceArray = ["Item 4", "Item 5"];
+console.log(insertArrays(targetArray, sourceArray)); // ["Item 1", "Item 2", "Item 3", "item 4","item 5"]
 
 ```
 
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
-const insertElementLastPosition = (list, newData) => {
-  for (let index = list.length ; index >= list.length ; index--) {
-    for (let arrayIndex = 0; arrayIndex < newData.length; arrayIndex++) {
-      const element = newData[arrayIndex];
-      list[index + arrayIndex] = element;
+// Insert arrays into another array
+
+const insertArrays = (targetArray, sourceArray) => {
+    for (let index = 0; index < sourceArray.length; index++) {
+        console.log(targetArray)
+        targetArray[targetArray.length] = sourceArray[index]
     }
-  }
-  return list;
-};
+    return targetArray
+}
 
+//========================== shortest way =====================================================
+// const insertArrays = (targetArray, sourceArray) => {
+//     return [...targetArray, ...sourceArray];
+// };
+//=============================================================================================
 
-const list = ["Item 1", "Item 2", "Item 3"];
-const newData = ["Item 4", "Item 5"];
-const displayInsertElementLastPosition = insertElementLastPosition(
-  list,
-  newData
-);
-console.log(
-  "🚀 insert element last position",
-  displayInsertElementLastPosition
-);
-
-// or
-// const list = ["Item 1", "Item 2", "Item 3"];
-// const newData = ["Item 4", "Item 5"];
-// console.log(list.concat(newData))
+const targetArray = ["Item 1", "Item 2", "Item 3"];
+const sourceArray = ["Item 4", "Item 5"];
+const resultArray = insertArrays(targetArray, sourceArray);
+console.log("🚀 Combined array:", resultArray);
 
 ```  
 
