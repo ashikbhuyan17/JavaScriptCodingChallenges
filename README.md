@@ -227,11 +227,11 @@ console.log("🚀 Insert element specific position in an Array", displayInsertEl
 ---
 **[⬆ Back to Top](#header)**
 
-##### 05. Update element in array
+##### 06. Update element in array
 
 ```js
 
-const updateElement = (list, position, newData) => {
+const updateElement = (list, newData, position) => {
  //Write Your solution Here
 };
 
@@ -240,7 +240,7 @@ const updateElement = (list, position, newData) => {
 <details><summary style="cursor:pointer">Solution</summary>
 
 ```js
-const updateElementSpecificPosition = (list, newData, position) => {
+const updateElement = (list, newData, position) => {
     if (position >= 0 && position < list.length) {
         const updatedList = [...list]; // Create a copy of the original array
         updatedList[position] = newData; // Update element at specified position
@@ -254,22 +254,8 @@ const updateElementSpecificPosition = (list, newData, position) => {
 const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
 const newData = "Updated Item";
 const position = 2;
-const displayUpdatedList = updateElementSpecificPosition(list, newData, position);
+const displayUpdatedList = updateElement(list, newData, position);
 console.log("🚀 Updated list:", displayUpdatedList);
-
-const updateElement = (list, position, newData) => {
-  for (let index = 0; index < list.length; index++) {
-    list[position - 1] = newData
-  }
-  return list
-}
-const list = ["Item 1", "Item 2", "Item 3", "Item 4"];
-const position = 2
-const newData = "newItem"
-
-console.log(updateElement(list, position, newData))
-
-
 
 // or
 // let myArray = [
