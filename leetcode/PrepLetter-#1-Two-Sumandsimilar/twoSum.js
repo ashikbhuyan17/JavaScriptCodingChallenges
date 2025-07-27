@@ -22,6 +22,6 @@ function twoSum(numbers, target) {
 }
 // const numbersArr = [2, 7, 11, 15];
 const numbersArr = [-1, 0];
-const targetValue = 9;
+const targetValue = -1;
 const output = twoSum(numbersArr, targetValue);
 console.log('🚀 ~ output:', output);
