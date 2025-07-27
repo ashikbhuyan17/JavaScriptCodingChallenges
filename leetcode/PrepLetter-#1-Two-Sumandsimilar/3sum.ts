@@ -36,6 +36,7 @@ function threeSum(nums: number[]): number[][] {
   return result;
 }
 
-const nums = [-1, 0, 1, 2, -1, -4];
+// const nums = [-1, 0, 1, 2, -1, -4];
+const nums = [-2, 0, 1, 1, 2];
 let result = threeSum(nums);
 console.log('🚀 ~ result:', result);
