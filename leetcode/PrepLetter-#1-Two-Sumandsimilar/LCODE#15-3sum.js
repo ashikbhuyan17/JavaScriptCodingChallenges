@@ -23,10 +23,10 @@ function threeSum(nums) {
                 right--;
                 // ডুপ্লিকেট এড়াতে
                 //➡️ left পয়েন্টার যদি আগেরটার সমান হয়, তাহলে সেটিও skip করা হচ্ছে (ডুপ্লিকেট ট্রিপলেট এড়ানোর জন্য)।
-                while (left < right && nums[left] === nums[left + 1])
+                while (left < right && nums[left] === nums[left - 1])
                     left++;
                 //➡️ right পয়েন্টার যদি আগেরটার সমান হয়, সেটাও skip করা হচ্ছে।
-                while (left < right && nums[right] === nums[right - 1])
+                while (left < right && nums[right] === nums[right + 1])
                     right--;
             }
             else if (sum < 0) {
@@ -39,6 +39,7 @@ function threeSum(nums) {
     }
     return result;
 }
-const nums = [-1, 0, 1, 2, -1, -4];
+// const nums = [-1, 0, 1, 2, -1, -4];
+const nums = [-2, 0, 1, 1, 2];
 let result = threeSum(nums);
 console.log('🚀 ~ result:', result);

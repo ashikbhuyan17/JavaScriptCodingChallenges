@@ -23,9 +23,9 @@ function threeSum(nums: number[]): number[][] {
 
         // ডুপ্লিকেট এড়াতে
         //➡️ left পয়েন্টার যদি আগেরটার সমান হয়, তাহলে সেটিও skip করা হচ্ছে (ডুপ্লিকেট ট্রিপলেট এড়ানোর জন্য)।
-        while (left < right && nums[left] === nums[left + 1]) left++;
+        while (left < right && nums[left] === nums[left - 1]) left++;
         //➡️ right পয়েন্টার যদি আগেরটার সমান হয়, সেটাও skip করা হচ্ছে।
-        while (left < right && nums[right] === nums[right - 1]) right--;
+        while (left < right && nums[right] === nums[right + 1]) right--;
       } else if (sum < 0) {
         left++;
       } else {
